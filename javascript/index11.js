@@ -5,3 +5,10 @@ const sum = (function() {
     };
 })();
 console.log(sum(1, 2, 3));
+
+const sum1 = (function() {
+    return function sum1(...args) {
+        return args.reduce((a, b) => a + b, 0);
+    };
+})();
+console.log(sum1(1, 2, 3));
